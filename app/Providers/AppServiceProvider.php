@@ -4,8 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Interfaces\InternetServiceProviderInterface;
-use App\Services\MptServiceProvider;
-use App\Services\OoredooServiceProvider;
+use App\Services\OperatorServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,8 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(InternetServiceProviderInterface::class, MptServiceProvider::class);
-        $this->app->bind(InternetServiceProviderInterface::class, OoredooServiceProvider::class);
+        $this->app->bind(InternetServiceProviderInterface::class, OperatorServiceProvider::class);
     }
 
     /**

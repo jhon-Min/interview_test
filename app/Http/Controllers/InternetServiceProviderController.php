@@ -27,7 +27,7 @@ class InternetServiceProviderController extends Controller
 
     public function getOoredooInvoiceAmount(Request $request)
     {
-        $amount = $this->internetServiceProvider->getInvoiceAmount($request->get('month') ?: 1);
+        $amount = $this->internetServiceProvider->getInvoiceOoredooAmount($request->get('month') ?: 1);
 
         return response()->json([
             'data' => $amount
